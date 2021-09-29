@@ -43,3 +43,21 @@ class admiAnemia(models.Model):
 
     def __str__(self):
         return self.nomEnfer
+
+class exclusionAnemia(models.Model):
+    paciente = models.ForeignKey(paciente, on_delete=models.CASCADE)
+    fechaExclu = models.DateField()
+    razonExclu = models.CharField(max_length=30)
+    ObservaExclu = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.razonExclu
+
+class movimientoAnemia(models.Model):
+    paciente = models.ForeignKey(paciente, on_delete=models.CASCADE)
+    fechaMotivo = models.DateField()
+    razonMotivo = models.CharField(max_length=30)
+    obserMotivo = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.razonMotivo

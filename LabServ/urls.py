@@ -26,7 +26,8 @@ router.register(r'SolexaLAbCps', views.SolexalabcpsViewSet)
 router.register(r'paciente', viewCnsrPac.pacienteViewSet)
 router.register(r'presAnemia', viewCnsrPac.presAnemiaViewSet)
 router.register(r'adminAnemia', viewCnsrPac.admiAnemiaViewSet)
-
+router.register(r'excluAnemia', viewCnsrPac.exclusionAnemiaViewSet)
+router.register(r'movimientoAnemia', viewCnsrPac.movimientoAnemiaViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
